@@ -17,15 +17,15 @@ const messageSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-    .addCase(getMessage.pending, (state) => ({
-      ...state, isLoading: true,
-    }))
-    .addCase(getMessage.fulfilled, (state, action) => ({
-      ...state, isLoading: false, message: action.payload,
-    }))
-    .addCase(getMessage.rejected, (state, action) => ({
-      ...state, isLoading: false, error: action.error.message,
-    }));
+      .addCase(getMessage.pending, (state) => ({
+        ...state, isLoading: true,
+      }))
+      .addCase(getMessage.fulfilled, (state, action) => ({
+        ...state, isLoading: false, message: action.payload,
+      }))
+      .addCase(getMessage.rejected, (state, action) => ({
+        ...state, isLoading: false, error: action.error.message,
+      }));
   },
 });
 
